@@ -4,7 +4,8 @@ require_once './vendor/autoload.php';
 require_once './lib.php';
 ini_set('default_charset', 'utf-8');
 
-$baseUrl = 'http://goshaword.server.local/';
+//$baseUrl = 'http://goshaword.server.local/';
+$baseUrl = 'http://holiminsk.by/doc/';
 $nosql = new NoSQLite\NoSQLite('mydb.sqlite');
 $store = $nosql->getStore('orders');
 $orders = $store->getAll();
