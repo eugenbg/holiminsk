@@ -189,7 +189,7 @@ function _getPrice($qty) {
     }
 
     foreach ($ranges as $range) {
-        if($qty > $range['from'] && $qty < $range['to']) {
+        if($qty >= $range['from'] && $qty <= $range['to']) {
             return $range['price'];
         }
     }
