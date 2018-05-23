@@ -69,7 +69,9 @@ function generateInvoice($id, $docsPath) {
         ->setActiveSheetIndex(0)
         ->setCellValue('F19', $price);
 
-    $amountText = sprintf('Всего стоимость с НДС: %s, 0 копеек', num2str($qty * 2.3));
+    $amount = $qty * $price;
+    $amountText = sprintf('Всего стоимость с НДС: %s', num2str($amount));
+
     $spreadsheet
         ->setActiveSheetIndex(0)
         ->setCellValue('B25', $amountText);
@@ -111,7 +113,7 @@ function generateNaklad($id, $docsPath) {
     $spreadsheet = $reader->load($fileName);
 
     $spreadsheet->setActiveSheetIndex(0)
-        ->setCellValue('B5', $_POST['unp']);
+        ->setCellValue('T3', $_POST['unp']);
 
     $date = date('d.m.Y');
     $spreadsheet->setActiveSheetIndex(0)
@@ -136,7 +138,7 @@ function generateNaklad($id, $docsPath) {
         ->setActiveSheetIndex(0)
         ->setCellValue('N16', $price);
 
-    $amountText = sprintf('Всего стоимость с НДС: %s, 0 копеек', num2str($qty * 2.3));
+    $amountText = sprintf('Всего стоимость с НДС: %s', num2str($price * $qty));
     $spreadsheet
         ->setActiveSheetIndex(0)
         ->setCellValue('I22', $amountText);
