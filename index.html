@@ -4,48 +4,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>Заполните форму и скачайте готовый договор</title>
+    <style>
+		body {
+			font: 14px/1.2 sans-serif;
+/*			background: url(/i/bg1.jpg) no-repeat 50% 0 / 100% auto, url(/i/bg2.jpg) no-repeat 50% 100% / 100% auto, url(/i/bg3.jpg) no-repeat 50% 0, #ffc102;*/
+			background: url(/i/bg1.jpg) no-repeat 50% 0 / 100% auto, #ffc102;
+			padding: 10px;
+			margin: 0;
+		}
+		body * {
+			box-sizing: border-box;
+		}
+		.wrap {
+			width: 100%;
+			max-width: 500px;
+			margin: 0 auto;
+		}
+		header {
+			padding: 0 0 20px;
+			border-bottom: 1px solid #fff;
+			margin: 0 0 20px;
+		}
+		header a {
+			display: block;
+			width: 50%;
+			margin: 0 auto;
+		}
+		header a img {
+			display: block;
+			width: 100%;
+		}
+		.wrap form {
+		}
+		.wrap form label {
+			display: block;
+			margin: 0 0 5px;
+			font-weight: bold;
+			color: #000;
+			font-size: 18px;
+		}
+		.wrap form input, .wrap form textarea {
+			display: block;
+			width: 100%;
+			padding: 10px 20px;
+			margin: 0 0 15px;
+			border: 1px solid #000;
+			border-radius: 5px;
+		}
+		.wrap form input {
+		}
+		.wrap form textarea {
+			height: 120px;
+		}
+		.wrap form button {
+			display: inline-block;
+			padding: 10px 20px;
+			margin: 10px 0 0;
+			border: 1px solid #000;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		footer {
+			padding: 20px 0 0;
+			border-top: 1px solid #fff;
+			margin: 20px 0 0;
+			overflow: hidden;
+		}
+		footer a {
+			float: left;
+			width: 40%;
+		}
+		footer a img {
+			display: block;
+			width: 130px;
+			max-width: 100%;
+		}
+		footer div {
+			float: right;
+			width: 55%;
+		}
+	</style>
 </head>
 <body>
 
-<div style="padding: 50px">
+<div class="wrap">
+	<header><a href="/"><img src="/i/logo.gif" alt=""></a></header>
     <form action="app.php" method="POST">
-
         <label for="post">Должность например: "Директор" или "Начальник отдела"</label>
-        <input  type="text" name="post" id="post" \>
-        <br/><br/>
-
+        <input  type="text" name="post" id="post">
         <label for="postName">ФИО подписывающего лица в формате: Петров И.Э.</label>
-        <input type="text"  name="postName" id="postName" \>
-        <br/><br/>
-
+        <input type="text"  name="postName" id="postName">
         <label for="ustav">На основании какого документа например: Устав</label>
-        <input type="text" name="ustav" id="ustav"  \>
-        <br/><br/>
-
+        <input type="text" name="ustav" id="ustav">
         <label for="qty">Количество пакетиков</label>
-        <input type="text" name="qty" id="qty" \>
-        <br/><br/>
-
-        <label for="rekviziti">Реквизиты предприятия</label><br/>
+        <input type="text" name="qty" id="qty">
+        <label for="rekviziti">Реквизиты предприятия</label>
         <textarea cols="100" rows="10" type="text" name="rekviziti" id="rekviziti"></textarea>
-        <br/><br/>
-
         <label for="unp">УНП</label>
-        <input type="text" name="unp" id="unp"  \>
-        <br/><br/>
-
+        <input type="text" name="unp" id="unp">
         <label for="company">Наименование предприятия</label>
-        <input type="text" name="company" id="company"  \>
-        <br/><br/>
-
+        <input type="text" name="company" id="company">
         <label for="email">Email</label>
-        <input type="text" name="email"  id="email" \>
-        <br/><br/>
-
-
-
+        <input type="text" name="email"  id="email">
         <button type="submit">Отправить</button>
     </form>
+	<footer><a href="/"><img src="/i/logo.gif" alt=""></a> <div>2015 Все права защищены. Зарегистрирован 16.02.16г. № 305710</div></footer>
 </div>
 
 </body>

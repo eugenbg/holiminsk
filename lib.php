@@ -44,10 +44,33 @@ function generateInvoice($id, $docsPath) {
         ->setCellValue('F8', $header);
 
     $company = $_POST['company'];
-    $companyText = sprintf('Заказчик: %s', $company);
+    $companyText = sprintf('Покупатель: %s', $company);
     $spreadsheet
         ->setActiveSheetIndex(0)
         ->setCellValue('B10', $companyText);
+    
+    
+    $company = $_POST['company'];
+    $companyText = sprintf($company);
+    $spreadsheet
+        ->setActiveSheetIndex(0)
+        ->setCellValue('F29', $companyText);
+    
+    
+     $post = $_POST['post'];
+    $post = sprintf( $post);
+    $spreadsheet
+        ->setActiveSheetIndex(0)
+        ->setCellValue('F30', $post);
+    
+    
+    $postName = $_POST['postName'];
+    $postName = sprintf('_______________________/%s', $postName);
+    $spreadsheet
+        ->setActiveSheetIndex(0)
+        ->setCellValue('F31', $postName);
+    
+    
 
     $rekviziti = $_POST['rekviziti'];
     $rekviziti = explode("\r\n", $rekviziti);
