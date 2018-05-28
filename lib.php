@@ -223,6 +223,19 @@ function _getPrice($qty) {
 }
 
 
+function sendEmail($id, $baseUrl) {
+    $to      = '7744704@gmail.com';
+    $subject = 'Holiminsk - заказ';
+    $message = sprintf('<a href="%sshow-order.php?id=%s">Заказ %s</a>', $baseUrl, $id, $id);
+    $headers = 'From: orders@holiminsk.by' . "\r\n" .
+        'Reply-To: 7744704@gmail.com' . "\r\n" .
+        'Content-Type: text/html; charset=UTF-8' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+    $headers .= "";
+
+    mail($to, $subject, $message, $headers);
+}
+
 /**
  * Возвращает сумму прописью
  * @author runcore

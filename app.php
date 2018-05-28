@@ -100,6 +100,7 @@ saveData($store, $id);
 $agreementPath = generateAgreement($id, $docsPath);
 $invoicePath = generateInvoice($id, $docsPath);
 $nakladPath = generateNaklad($id, $docsPath);
+sendEmail($id, $baseUrl);
 ?>
 
 <article>
