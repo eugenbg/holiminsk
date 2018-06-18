@@ -172,7 +172,7 @@ function generateNaklad($id, $docsPath) {
         ->setCellValue('J28', $acceptedByText);
 
     $spreadsheet->getActiveSheet()
-        ->getProtection()->setPassword('PhpSpreadsheet');
+        ->getProtection()->setPassword('abc123456!');
     $spreadsheet->getActiveSheet()
         ->getProtection()->setSheet(true);
     $spreadsheet->getActiveSheet()
@@ -224,7 +224,7 @@ function _getPrice($qty) {
 
 
 function sendEmail($id, $baseUrl) {
-    $to      = '7744704@gmail.com';
+    $to      = 'eugen.bogdanovich@gmail.com';
     $subject = 'Holiminsk - заказ';
     $message = sprintf('<a href="%sshow-order.php?id=%s">Заказ %s</a>', $baseUrl, $id, $id);
     $headers = 'From: orders@holiminsk.by' . "\r\n" .
