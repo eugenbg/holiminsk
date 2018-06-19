@@ -99,8 +99,8 @@ function generateInvoice($id, $docsPath) {
         ->setActiveSheetIndex(0)
         ->setCellValue('B25', $amountText);
 
-    $spreadsheet->getActiveSheet()
-        ->getProtection()->setPassword('PhpSpreadsheet');
+/*    $spreadsheet->getActiveSheet()
+        ->getProtection()->setPassword('PhpSpreadsheet');*/
     $spreadsheet->getActiveSheet()
         ->getProtection()->setSheet(true);
     $spreadsheet->getActiveSheet()
