@@ -224,7 +224,7 @@ function _getPrice($qty) {
 
 
 function sendEmail($id, $baseUrl) {
-    $to      = 'eugen.bogdanovich@gmail.com';
+    $to      = '7744704@gmail.com';
     $subject = 'Holiminsk - заказ';
     $message = sprintf('<a href="%sshow-order.php?id=%s">Заказ %s</a>', $baseUrl, $id, $id);
     $headers = 'From: orders@holiminsk.by' . "\r\n" .
