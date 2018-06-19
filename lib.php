@@ -171,8 +171,8 @@ function generateNaklad($id, $docsPath) {
         ->setActiveSheetIndex(0)
         ->setCellValue('J28', $acceptedByText);
 
-    $spreadsheet->getActiveSheet()
-        ->getProtection()->setPassword('abc123456!');
+/*    $spreadsheet->getActiveSheet()
+        ->getProtection()->setPassword('abc123456!');*/
     $spreadsheet->getActiveSheet()
         ->getProtection()->setSheet(true);
     $spreadsheet->getActiveSheet()
